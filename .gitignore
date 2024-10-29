@@ -1,0 +1,52 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Dependências de node_modules (bibliotecas)
+node_modules/
+
+# Diretório de build do Vite
+dist/
+
+# Logs de execução
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sistema operacional (Windows/Mac/Linux)
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do editor de código
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Ambiente (variáveis sensíveis)
+.env
+.env.local
+.env.*.local
