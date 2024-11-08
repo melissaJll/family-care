@@ -1,3 +1,5 @@
+// src/components/Menu.jsx
+import React from "react";
 import styled from "styled-components";
 
 const StyledMenu = styled.nav`
@@ -5,7 +7,8 @@ const StyledMenu = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  //hover aninhado
+  background-color: #0A67C4; // cor do fundo da barra de navegação
+
   a {
     text-decoration: none;
     color: #fcf6f6;
@@ -26,9 +29,9 @@ const StyledMenu = styled.nav`
 function Menu() {
   return (
     <StyledMenu>
-      <a href="">Home</a>
-      <a href="">Produtos</a>
-      <a href="">Contatos</a>
+      <a href="#home">Home</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contatos">Contatos</a>
     </StyledMenu>
   );
 }

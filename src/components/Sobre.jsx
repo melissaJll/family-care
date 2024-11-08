@@ -1,39 +1,44 @@
-// src/Sobre.jsx
+// src/components/Sobre.jsx
+import React from "react";
 import styled from "styled-components";
 
 const StyledSobre = styled.div`
-  text-align: center; /* Centraliza o texto do título principal */
-  margin: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
 
   h1 {
-    font-family: 'Plus Jakarta Sans', sans-serif; /* Usando a fonte Jakarta Plus */
-    font-size: 2.5rem; /* Tamanho do título principal */
+    font-size: 2.5rem;
+    color: #333;
   }
 
   .content {
-    display: flex; /* Usando flexbox para alinhar a imagem e o texto lado a lado */
-    justify-content: space-between;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     margin-top: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-    img {
-      width: 200px; /* Tamanho da imagem */
-      height: auto; /* Mantém a proporção da imagem */
-      margin-right: 20px; /* Espaçamento à direita da imagem */
+  img {
+    width: 300px;
+    border-radius: 8px;
+  }
+
+  .text-section {
+    max-width: 500px;
+    text-align: left;
+
+    h2 {
+      font-size: 1.8rem;
+      color: #0A67C4;
     }
 
-    .text-section {
-      text-align: left; /* Alinha o texto à esquerda */
-      
-      h2 {
-        font-family: 'Plus Jakarta Sans', sans-serif; /* Fonte para o subtítulo */
-        font-size: 1.5rem; /* Tamanho do subtítulo */
-      }
-
-      p {
-        font-size: 1rem; /* Tamanho do texto */
-        color: #666; /* Cor do texto */
-      }
+    p {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.5;
     }
   }
 `;
@@ -41,12 +46,15 @@ const StyledSobre = styled.div`
 function Sobre() {
   return (
     <StyledSobre>
-      <h1>Sobre</h1>
+      <h1>Consulte os nossos benefícios</h1>
       <div className="content">
-        <img src="https://via.placeholder.com/200" alt="Descrição da imagem" /> {/* Imagem provisória online */}
+        <img src="https://via.placeholder.com/300" alt="Imagem sobre o benefício" />
         <div className="text-section">
-          <h2>Quem Somos</h2> {/* Título à direita */}
-          <p>Somos uma empresa dedicada a oferecer as melhores soluções para nossos clientes.</p> {/* Texto abaixo do título */}
+          <h2>Tratamento de qualidade para cuidar de sua família</h2>
+          <p>
+            Somos uma empresa dedicada a oferecer as melhores soluções para
+            cuidar dos nossos clientes, com segurança e respeito.
+          </p>
         </div>
       </div>
     </StyledSobre>
