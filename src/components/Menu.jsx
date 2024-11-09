@@ -7,11 +7,11 @@ const StyledMenu = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #0A67C4; // cor do fundo da barra de navegação
+  background-color: #fcf6f6; // cor do fundo da barra de navegação
 
   a {
     text-decoration: none;
-    color: #fcf6f6;
+    color: #333333;
     height: 40px;
     width: 30%;
     display: flex;
@@ -20,8 +20,8 @@ const StyledMenu = styled.nav`
     transition: transform 100ms;
 
     &:hover {
-      background-color: #a575cc;
-      color: #3b2d2d;
+      background-color: #2D84DA;
+      color: #ececec;
     }
   }
 `;

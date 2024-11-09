@@ -1,12 +1,12 @@
 import styled from "styled-components";
-
+import imageBackg from '../assets/images/image-backg.png'; // Caminho da imagem local
 
 // Estilo para o Banner
 const StyledBanner = styled.div`
   position: relative;
   width: 100%;
   height: 400px; /* Altura do banner */
-  background-image: url('https://via.placeholder.com/1200x400'); /* Substitua pela URL da imagem desejada */
+  background-image: url(${imageBackg}); /* Substitua pela URL da imagem local */
   background-size: cover; /* Ajusta a imagem para cobrir todo o componente */
   background-position: center; /* Centraliza a imagem */
 

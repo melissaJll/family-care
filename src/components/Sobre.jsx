@@ -1,6 +1,8 @@
 // src/components/Sobre.jsx
 import React from "react";
 import styled from "styled-components";
+import imageIdosos from '../assets/images/imageIdosos.png'; // Caminho da imagem local
+
 
 const StyledSobre = styled.div`
   text-align: center;
@@ -48,7 +50,7 @@ function Sobre() {
     <StyledSobre>
       <h1>Consulte os nossos benefícios</h1>
       <div className="content">
-        <img src="https://via.placeholder.com/300" alt="Imagem sobre o benefício" />
+        <img src={imageIdosos} alt="Imagem sobre o benefício" />
         <div className="text-section">
           <h2>Tratamento de qualidade para cuidar de sua família</h2>
           <p>
