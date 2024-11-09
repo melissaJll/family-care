@@ -22,22 +22,23 @@ const StyledBanner = styled.div`
   & > h2 {
     /* Limitar a largura do conteúdo de texto a 50% */
     max-width: 50%;
-    width: 50%;
-    margin-left: 0; /* Garantindo que o texto fique à esquerda */
+    width: 45%;
+    margin-left: 1rem; /* Garantindo que o texto fique à esquerda */
   }
 
   & > p:first-child {
-    font-size: 1.8rem;
-    line-height: 2.5rem;
+    font-size: 1.4rem;  /* Diminuindo o tamanho da fonte */
+    line-height: 2rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
   }
 
   & > h2 {
-    font-size: clamp(2rem, 6vw, 4rem);
+    font-size: clamp(1.8rem, 5vw, 3.3rem); /* Ajustando o tamanho da fonte */
     max-width: 735px;
     margin: 1rem 0;
+    margin-left: 1rem;
   }
 
   & > p:last-of-type {
@@ -45,23 +46,6 @@ const StyledBanner = styled.div`
     line-height: 1.6;
     letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
-  }
-
-  & > a {
-    display: inline-block;
-    background: #415da1;
-    border-radius: 5px;
-    font-size: 1.6rem;
-    font-weight: 500;
-    padding: 14px 24px;
-    color: #fff;
-    text-decoration: none;
-    transition: background 0.3s ease;
-    margin-top: 1.5rem;
-
-    &:hover {
-      background: #364a82;
-    }
   }
 `;
 
@@ -73,12 +57,12 @@ function Banner() {
   return (
     <StyledBanner>
       <p data-aos="fade-right">Encontre o equilíbrio emocional</p>
-      <h2 data-aos="fade-right">O seu bem-estar mental é a nossa prioridade</h2>
+      <h2 data-aos="fade-right">Neque porro quisquam 
+      est qui dolorem</h2>
       <p data-aos="fade-right">
         Você encontra uma equipe de profissionais dedicados a ajudá-lo.
         Oferecemos tratamentos personalizados e eficazes para ajudá-lo a lidar com seus problemas.
       </p>
-      <a href="servicos.html" data-aos="fade-right">Nossos Serviços</a>
     </StyledBanner>
   );
 }
