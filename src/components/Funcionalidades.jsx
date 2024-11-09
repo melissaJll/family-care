@@ -1,51 +1,74 @@
 // src/components/Funcionalidades.jsx
 import React from "react";
 import styled from "styled-components";
+import Slider from "react-slick";
 
+import tela1 from '../assets/images/tela1.png'; 
+import tela2 from '../assets/images/tela2.png'; 
+import tela3 from '../assets/images/tela3.png'; 
+
+// Importando o CSS diretamente no JS
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+
+// Estilos do container e elementos
 const FuncionalidadesContainer = styled.section`
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-around;
 
-  h2 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
+  align-items: center;
+
+  background-color: #ffffff;
+  justify-content: center;
+  padding-top: 4rem ;
+  padding-bottom: 4rem ;
 
   .funcionalidade-list {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
+    width: 49%;
+    
+  }
+
+  h2 {
+    margin-bottom: 2rem;
   }
 
   .funcionalidade-item {
-    max-width: 300px;
-    padding: 20px;
+    margin-bottom: 30px;
     text-align: left;
-    border: 1px solid #DDD;
-    border-radius: 8px;
-    background-color: #F9FAFC;
+
+    h3 {
+      color: #0a67c4;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+    }
   }
 
-  h3 {
-    color: #0A67C4;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-
-  p {
-    color: #666;
-    font-size: 1rem;
+  .carrossel {
+    width: 28%;
+    margin-right: -3rem;
   }
 `;
 
+// Função para o carrossel de imagens
 function Funcionalidades() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <FuncionalidadesContainer>
-      <h2>Como funciona o software</h2>
       <div className="funcionalidade-list">
+        <h2>Como funciona o software</h2>
         <div className="funcionalidade-item">
           <h3>Relatórios Diários</h3>
           <p>Receba atualizações diárias sobre o cuidado do seu familiar.</p>
@@ -58,6 +81,20 @@ function Funcionalidades() {
           <h3>Agenda de Atividades</h3>
           <p>Planeje e acompanhe as atividades diárias do idoso de maneira prática.</p>
         </div>
+      </div>
+
+      <div className="carrossel">
+        <Slider {...settings}>
+          <div>
+            <img src={tela1} alt="Tela 1" style={{ width: "80%" }} />
+          </div>
+          <div>
+            <img src={tela2} alt="Tela 2" style={{ width: "80%" }} />
+          </div>
+          <div>
+            <img src={tela3} alt="Tela 3" style={{ width: "80%" }} />
+          </div>
+        </Slider>
       </div>
     </FuncionalidadesContainer>
   );
