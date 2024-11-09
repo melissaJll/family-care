@@ -8,6 +8,8 @@ const StyledSobre = styled.div`
   text-align: center;
   padding: 20px;
   margin-top: 40px;
+  padding-top: 3rem ;
+  padding-bottom: 3rem ;
 
   h1 {
     font-size: 2.5rem;
@@ -48,7 +50,7 @@ const StyledSobre = styled.div`
 function Sobre() {
   return (
     <StyledSobre>
-      <h1>Consulte os nossos benefícios</h1>
+      <h1>Sobre os nossos benefícios</h1>
       <div className="content">
         <img src={imageIdosos} alt="Imagem sobre o benefício" />
         <div className="text-section">
