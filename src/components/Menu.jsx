@@ -7,7 +7,7 @@ const StyledMenu = styled.header`
     top: 0;
   position: sticky;
   z-index: 1000; /* Garante que o menu fica acima de outros elementos */
-  background-color: #D3E8F9;
+  background-color: #F9FAFC;
 
   .limitador {
     max-width: 80vw;
