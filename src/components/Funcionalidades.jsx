@@ -53,6 +53,22 @@ const FuncionalidadesContainer = styled.section`
     width: 28%;
     margin-right: -3rem;
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Altera a direção para coluna */
+    align-items: center; /* Centraliza os itens */
+    
+    
+    .funcionalidade-list,
+    .carrossel {
+      width: 100%; /* Cada um ocupa a largura total */
+      margin-bottom: 2rem; /* Adiciona espaço entre os elementos */
+    }
+
+    .carrossel {
+      margin-right: 0; /* Remove a margem direita no carrossel */
+    }
+  }
 `;
 
 // Função para o carrossel de imagens

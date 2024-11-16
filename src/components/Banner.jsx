@@ -1,3 +1,4 @@
+// src/components/Banner.jsx
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import AOS from 'aos';
@@ -27,7 +28,7 @@ const StyledBanner = styled.div`
   }
 
   & > p:first-child {
-    font-size: 1.4rem;  /* Diminuindo o tamanho da fonte */
+    font-size: 1.4rem; /* Diminuindo o tamanho da fonte */
     line-height: 2rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
@@ -47,6 +48,26 @@ const StyledBanner = styled.div`
     letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
   }
+
+  @media (max-width: 768px) {
+    padding: 1rem; /* Reduzindo o padding em telas menores */
+    
+    & > p,
+    & > h2 {
+      max-width: 90%; /* Aumentando a largura máxima em telas menores */
+      width: 90%; /* Ajustando a largura para 90% */
+      margin-left: 0; /* Removendo a margem à esquerda */
+      text-align: center; /* Centralizando o texto */
+    }
+
+    & > p:first-child {
+      font-size: 1.2rem; /* Diminuindo o tamanho da fonte em telas menores */
+    }
+
+    & > h2 {
+      font-size: clamp(1.5rem, 5vw, 2.5rem); /* Ajustando o tamanho da fonte em telas menores */
+    }
+  }
 `;
 
 function Banner() {
@@ -57,8 +78,7 @@ function Banner() {
   return (
     <StyledBanner>
       <p data-aos="fade-right">Encontre o equilíbrio emocional</p>
-      <h2 data-aos="fade-right">Neque porro quisquam 
-      est qui dolorem</h2>
+      <h2 data-aos="fade-right">Neque porro quisquam est qui dolorem</h2>
       <p data-aos="fade-right">
         Você encontra uma equipe de profissionais dedicados a ajudá-lo.
         Oferecemos tratamentos personalizados e eficazes para ajudá-lo a lidar com seus problemas.

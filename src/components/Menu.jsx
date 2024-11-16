@@ -1,10 +1,11 @@
 // src/components/Menu.jsx
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import logoNomeBlue from "../assets/images/family_Care_logo_colored.png"
+import logoNomeBlue from "../assets/images/family_Care_logo_colored.png";
+import menuIcon from "../assets/images/icon-menuu.png"
 
 const StyledMenu = styled.header`
-    top: 0;
+  top: 0;
   position: sticky;
   z-index: 1000; /* Garante que o menu fica acima de outros elementos */
   background-color: #F9FAFC;
@@ -15,7 +16,7 @@ const StyledMenu = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: px 0;
+    padding: 0; /* Corrigido para 0 */
   }
 
   .logo {
@@ -27,10 +28,16 @@ const StyledMenu = styled.header`
     }
   }
 
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
   nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   .menu-item {
@@ -55,26 +62,44 @@ const StyledMenu = styled.header`
 
   .icon-menu {
     display: none; /* Escondido para desktop */
+    cursor: pointer;
   }
 
   @media (max-width: 768px) {
     .limitador {
       flex-direction: column;
+      align-items: flex-start; /* Alinha os itens à esquerda */
     }
 
     nav ul {
-      display: none;
+      display: ${({ isOpen }) => (isOpen ? "flex" : "none")}; /* Mostra ou esconde o menu */
+      flex-direction: column; /* Coloca os itens em coluna */
+      width: 100%; /* Faz o menu ocupar toda a largura */
+      background-color: #F9FAFC; /* Fundo do menu */
+      position: absolute; /* Posiciona o menu */
+      top: 60px; /* Abaixo do header */
+      left: 0; /* Alinhado à esquerda */
+      padding: 1rem 0; /* Espaçamento interno */
     }
 
     .icon-menu {
       display: inline-block; /* Exibe o ícone no mobile */
     }
+    img {
+      height: 28px;
+    }
   }
 `;
 
 function Menu() {
+  const [isOpen, setIsOpen] = useState(false); // Estado para controlar a visibilidade do menu
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <StyledMenu>
+    <StyledMenu isOpen={isOpen}>
       <div className="limitador">
         <div className="logo">
           <a href="index.html">
@@ -83,9 +108,9 @@ function Menu() {
         </div>
         <nav>
           <h2>
-            <a href="#menu" className="icon-menu">
-              <img src="assets/icon-menu.svg" alt="Ícone de menu" />
-            </a>
+            <span className="icon-menu" onClick={toggleMenu}>
+              <img src={menuIcon} alt="menu" />
+            </span>
           </h2>
           <ul className="menu">
             <li><a href="index.html" className="menu-item">Home</a></li>
