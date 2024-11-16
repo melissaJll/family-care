@@ -61,7 +61,7 @@ const BeneficiosContainer = styled.section`
 
 function Beneficios() {
   return (
-    <BeneficiosContainer>
+    <BeneficiosContainer id="beneficios">
       <h2>Consulte os nossos benefícios</h2>
       <div className="beneficio-list">
         <div className="beneficio-item">

@@ -58,7 +58,7 @@ const DepoimentosContainer = styled.section`
 
 function Depoimentos() {
   return (
-    <DepoimentosContainer>
+    <DepoimentosContainer id="depoimentos">
       <h2>O que nossos clientes dizem</h2>
       <div className="depoimento-list">
         <div className="depoimento-item">

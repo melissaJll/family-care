@@ -57,7 +57,7 @@ const FuncionalidadesContainer = styled.section`
   @media (max-width: 768px) {
     flex-direction: column; /* Altera a direção para coluna */
     align-items: center; /* Centraliza os itens */
-    
+
     
     .funcionalidade-list,
     .carrossel {
@@ -82,7 +82,7 @@ function Funcionalidades() {
   };
 
   return (
-    <FuncionalidadesContainer>
+    <FuncionalidadesContainer id="funcionalidades">
       <div className="funcionalidade-list">
         <h2>Como funciona o software</h2>
         <div className="funcionalidade-item">

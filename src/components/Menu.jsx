@@ -10,6 +10,7 @@ const StyledMenu = styled.header`
   z-index: 1000; /* Garante que o menu fica acima de outros elementos */
   background-color: #F9FAFC;
 
+
   .limitador {
     max-width: 80vw;
     margin: auto;
@@ -52,6 +53,7 @@ const StyledMenu = styled.header`
     transition: background-color 200ms, color 200ms;
     border-radius: 2rem;
     text-decoration: none;
+    margin-top: 0.4rem;
 
     &:hover,
     &:focus {
@@ -91,6 +93,30 @@ const StyledMenu = styled.header`
   }
 `;
 
+
+
+const MenuItem = styled.a`
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  height: 44px;
+  padding: 0.1rem 1rem;
+  transition: background-color 200ms, color 200ms;
+  border-radius: 2rem;
+  text-decoration: none; /* Remove o sublinhado */
+  
+  margin-top: 0.4rem;
+
+  &:hover,
+  &:focus {
+    background-color: #2d84da;
+    color: #ffffff;
+  }
+`;
+
 function Menu() {
   const [isOpen, setIsOpen] = useState(false); // Estado para controlar a visibilidade do menu
 
@@ -113,9 +139,11 @@ function Menu() {
             </span>
           </h2>
           <ul className="menu">
-            <li><a href="index.html" className="menu-item">Home</a></li>
-            <li><a href="sobre-nos.html" className="menu-item">Sobre nós</a></li>
-            <li><a href="servicos.html" className="menu-item">Serviços</a></li>
+          <li>
+              <MenuItem href="#funcionalidades">Funcionalidades</MenuItem>
+            </li>
+            <li><a href="#beneficios" className="menu-item">Benefícios</a></li>
+            <li><a href="#depoimentos" className="menu-item">Depoimentos</a></li>
           </ul>
         </nav>
       </div>
