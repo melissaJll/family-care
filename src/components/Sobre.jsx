@@ -50,7 +50,7 @@ const StyledSobre = styled.div`
 function Sobre() {
   return (
     <StyledSobre>
-      <h1>Sobre os nossos benefícios</h1>
+      <h1>Nossa Missão</h1>
       <div className="content">
         <img src={imageIdosos} alt="Imagem sobre o benefício" />
         <div className="text-section">
