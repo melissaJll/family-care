@@ -77,11 +77,11 @@ function Banner() {
 
   return (
     <StyledBanner>
-      <p data-aos="fade-right">Encontre o equilíbrio emocional</p>
-      <h2 data-aos="fade-right">Neque porro quisquam est qui dolorem</h2>
+      <p data-aos="fade-right">Tecnologia para o cuidado humano</p>
+      <h2 data-aos="fade-right">Conectando famílias, cuidadores e agências em um só lugar</h2>
       <p data-aos="fade-right">
-        Você encontra uma equipe de profissionais dedicados a ajudá-lo.
-        Oferecemos tratamentos personalizados e eficazes para ajudá-lo a lidar com seus problemas.
+        Nosso software oferece uma plataforma segura e prática para manter familiares informados sobre os cuidados diários, 
+        promovendo transparência e tranquilidade para todos.
       </p>
     </StyledBanner>
   );

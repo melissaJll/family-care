@@ -38,8 +38,8 @@ function Rodape() {
       <div className="rodape-secao">
         <div className="rodape-item">
           <h4>Empresa</h4>
-          <p>Sobre nós</p>
-          <p>Carreiras</p>
+          <p>Funcionalidades</p>
+          <p>benefícios</p>
         </div>
         <div className="rodape-item">
           <h4>Informações</h4>
