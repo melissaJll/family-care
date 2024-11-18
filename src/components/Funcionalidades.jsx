@@ -87,15 +87,15 @@ function Funcionalidades() {
         <h2>Como funciona o software</h2>
         <div className="funcionalidade-item">
           <h3>Relatórios Diários</h3>
-          <p>Receba atualizações diárias sobre o cuidado do seu familiar.</p>
+          <p data-aos="zoom-in">Receba atualizações diárias sobre o cuidado do seu familiar.</p>
         </div>
         <div className="funcionalidade-item">
           <h3>Notificações em Tempo Real</h3>
-          <p>Fique informado sobre qualquer ocorrência importante instantaneamente.</p>
+          <p data-aos="zoom-in">Fique informado sobre qualquer ocorrência importante instantaneamente.</p>
         </div>
         <div className="funcionalidade-item">
           <h3>Agenda de Atividades</h3>
-          <p>Planeje e acompanhe as atividades diárias do idoso de maneira prática.</p>
+          <p data-aos="zoom-in">Planeje e acompanhe as atividades diárias do idoso de maneira prática.</p>
         </div>
       </div>
 

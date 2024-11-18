@@ -1,8 +1,8 @@
 // src/components/Sobre.jsx
-import React from "react";
+import React, { useEffect } from 'react';
 import styled from "styled-components";
-import imageIdosos from '../assets/images/imageIdosos.png'; // Caminho da imagem local
-
+import imageIdosos from '../assets/images/imageIdosos.png'; import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyledSobre = styled.div`
   text-align: center;
@@ -48,14 +48,19 @@ const StyledSobre = styled.div`
 `;
 
 function Sobre() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
+
   return (
     <StyledSobre>
-      <h1>Nossa Missão</h1>
+      <h1 >Nossa Missão</h1>
       <div className="content">
         <img src={imageIdosos} alt="Imagem sobre o benefício" />
         <div className="text-section">
-          <h2>Tratamento de qualidade para cuidar de sua família</h2>
-          <p>
+          <h2 data-aos="zoom-in">Tratamento de qualidade para cuidar de sua família</h2>
+          <p data-aos="zoom-in">
             Somos uma empresa dedicada a oferecer as melhores soluções para
             cuidar dos nossos clientes, com segurança e respeito.
           </p>
